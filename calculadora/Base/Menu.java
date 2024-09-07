@@ -17,7 +17,7 @@ public class Menu {
         System.out.println("5- Exponencial");
         System.out.println("6- Cerrar");
         
-        
+        //input o entrada para elegir el metodo que se desea ejecutar
         caso=input.nextLine();
      
 
@@ -52,7 +52,7 @@ public class Menu {
         }
     }
 
-
+    //usado para obtener el ultimo valor insertado, el cual seria '6'
     public String getCaso(){
         return caso;
     }
