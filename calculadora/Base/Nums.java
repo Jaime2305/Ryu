@@ -2,17 +2,17 @@ package Base;
 import java.util.Scanner;
 
 
-
+//se hereda Menu para usar los colores
 public class Nums{
     
-    private int num;
+    private double num;
     private Scanner input= new Scanner(System.in);
     private String verificacion;
     private boolean sinerror,anterior;
 
     public void pdirNum(){
         //se inicializa siempre en false porque al terminar un ciclo queda guardado en true
-        //y por algun error que suceda olvidando eso se deja asi por comodidad
+        
         sinerror=false;
         
         while(sinerror==false){
@@ -21,7 +21,7 @@ public class Nums{
             */
         verificacion=input.nextLine();
         try{
-            num=Integer.parseInt(verificacion);
+            num=Double.parseDouble(verificacion);
             //si elige salirse no se ejecutara lo que sigue del codigo y saltara al error
             sinerror=true;
         
@@ -34,11 +34,11 @@ public class Nums{
                 System.out.print("...");
             //sino se volvera a ejecutar el mismo metodo pedirnumero hasta que sea numero o quiera salir
             }else{
-            System.out.println("Ingrese un valor valido!");}
+            System.out.println(Menu.ROJO+"Ingrese un valor valido!"+Menu.RESET);}
         }}}
      
    //obtenemos el ultimo valor guardado en num para enviarlo o obtenerlo desde Opera
-    public int darNum(){
+    public double darNum(){
          return num;
         }
 
