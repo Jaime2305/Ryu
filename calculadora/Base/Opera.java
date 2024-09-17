@@ -200,14 +200,7 @@ public class Opera extends Menu{
             ant=false;
         }else{
             num2 = mensajero.darNum();
-
-            /*dado que en matematica la potencia de 0^0 es indefinida
-             *en este caso se mantendria por la siguiente demostracion
-             0^0= 0^(1-1)= 0^1 * 0^-1 donde se sabe que 1/0 no esta definido,
-
-             solamente en conjuntos vacios si se toma como 1, pero son cosas que no recuerdo
-             */
-            
+            //verificaciones por numeros imaginarios, si se intenta sacar raiz de un negativo
             if(num2==0|| num1<0&&num2%2==0){
             System.out.println("Operacion indefinida");
             }else{
