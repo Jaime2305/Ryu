@@ -166,11 +166,18 @@ public class Opera extends Menu{
             System.out.println("Operacion indefinida");
             }else{
                 //verificacion imaginario
-                if(num1<0 && num2%1!=0){
-                    System.out.println(Menu.ROJO+"operacion no disponible"+Menu.RESET);
+                if(num1<0&&num2%2==0){
+                    System.out.println("Operacion indefinida");
                 }else{
+                    if(num1<0){
+                        num1 = -1 * num1;
+                        res = Math.pow(num1,num2);
+                        res = -1 * res;
+                        System.out.println("El resultado es: " + Menu.VERDE + res + Menu.RESET);
+                    } else {
                  res = Math.pow(num1, num2);
                  System.out.println("El resultado es: "+Menu.VERDE+ res+Menu.RESET);
+                    }
                 }
             }
         }    
@@ -206,7 +213,12 @@ public class Opera extends Menu{
             System.out.println("Operacion indefinida");
             }else{
                 if(num1<0){
-                    System.out.println(Menu.ROJO+"Solucion definida"+"\nen el conjunto imaginario"+Menu.RESET);
+
+                    num1=-1*num1;
+                    res = Math.pow(num1, 1/num2);
+                    res=-1*res;
+                    System.out.println("El resultado es: "+Menu.VERDE+ res+Menu.RESET);
+                  
                 }else{
                 res = Math.pow(num1, 1/num2);
                 System.out.println("El resultado es: "+Menu.VERDE+ res+Menu.RESET);
