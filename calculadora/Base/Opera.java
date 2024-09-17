@@ -165,6 +165,7 @@ public class Opera extends Menu{
             if(num1==0 &&  num2==0){
             System.out.println("Operacion indefinida");
             }else{
+                //verificacion imaginario
                 if(num1<0 && num2%1!=0){
                     System.out.println(Menu.ROJO+"operacion no disponible"+Menu.RESET);
                 }else{
